@@ -29,7 +29,7 @@ AZURE_VOICE_STYLES = [
     "unfriendly",
     "whispering"
 ]
-def playText(name, text):
+def play_text(name, text):
     speech_config = speechsdk.SpeechConfig(
         subscription=os.environ.get('SPEECH_KEY'), 
         region=os.environ.get('SPEECH_REGION'))
@@ -74,7 +74,7 @@ def messenger():
 def submit():
     name = request.args.get('name')
     message = request.args.get('message')
-    playText(name, message)
+    play_text(name, message)
     return jsonify(success=True), 204
 
 if __name__ == "__main__":
