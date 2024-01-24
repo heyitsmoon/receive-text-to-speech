@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text to Speech</title>
+</head>
+<body>
+    <h1>Send me a message</h1>
+    <form action="{{ url_for('submit') }}" method="get">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" >
+	<br>
+        <label for="message">Enter your message:</label>
+        <input type="text" id="message" name="message">
+	<br>
+	<br>
+        <button  type="submit">submit</button>
+	</form>
+</body>
+</html>
